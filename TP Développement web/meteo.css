@@ -1,0 +1,46 @@
+ /* css */
+ 
+ .header_ext
+{
+  padding: 30px;
+  background-color: #FEFEFE;
+}
+.header_int
+{
+margin: 0 auto;
+  max-width: 1300px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 2px;
+}
+
+.flexbox  
+{
+
+display : flex;
+justify-content : space-evenly;
+width : 50; 
+flex-wrap : wrap; 
+
+}
+
+
+.corps 
+
+{
+  line-height: 35px;
+  
+  border: 2px solid #333;
+}
+
+
+#footer
+{
+  background:rgb(225, 223, 223); 
+  position:relative;
+  bottom:0; 
+  width:100%; 
+  padding-top:3px; 
+  padding-bottom:1px; 
+  height:40px; 
+  }

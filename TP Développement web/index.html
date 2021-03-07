@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <charset="UTF-8">
+      <meta charset="utf-8" >
+      <!-- le minimum syndical -->
+      <meta name="viewport" content="width=device-width" />
+      <!-- ce que j'utilise -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+      <link rel="stylesheet" href="meteo.css" />
+      <script>                    
+         let villeCourante = "Lyon"
+         function showCity() { console.log(villeCourante); }
+      </script>
+   </head>
+   <body>
+      <div class = "flexbox" >
+         <div class="head_ext" style = "width : 1500px">
+            <div class="header_int" style="width: 1500px;  padding-top:10px; padding-bottom:20px;border: 2px solid #000000; text-align: center;background: rgba(255, 255, 128, .5);"
+               > <FONT size="6pt"> <FONT color="black"> <b> TP METEO </b> </FONT> </FONT> </div>
+         </div>
+         <div>
+            <label for="pet-select">Choisir le pays :</label>
+            <select onchange="showCity()"  id="pays">
+               <option value="selection">--- Please Choose an option un pays ---</option>
+               <option value="France">France</option>
+            </select>
+         </div>
+         <div class ="flexbox ; corps">
+            <div id="FranceBlock"  style = "visibility:hidden; background-color: white;" ">
+               <h2 align="center" class = "corps" style ="background-color:hsla(0,100%,50%,0.5);">Toute la France</h2>
+               <p align="center" > <FONT size="20pt">  </FONT> 
+                  <img src="images/meteoFrance.jpg" width="1500px" height = "500px"/>
+               </p>
+            </div>
+         </div>
+         <div class = "flexbox">
+            <div id="RegionsBlock"  style = "visibility:hidden ; background-color: white;">
+               <h2 align="center" class = "corps" style = "width : 1500px ; background-color:hsla(0,100%,50%,0.5);"> Météo par régions / villes </h2>
+            </div>
+            <div>
+               <label for="pet-select">Choisir une région :</label>
+            </div>
+            <div style = "visibility:hidden;">
+               <select onchange="showCity()" id="regions">
+                  <option value="selection">--- Please choose an option ---</option>
+                  <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
+                  <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
+                  <option value="Bretagne">Bretagne</option>
+                  <option value="Aquitaine">Aquitaine</option>
+               </select>
+            </div>
+            <div>
+               <label for="pet-select">Choisir une ville :</label>
+            </div>
+            <div style = "visibility :hidden;">
+               <select onchange="showCity()" id="villes">
+                  <option value="selection">--- Please choose an option ---</option>
+                  <option value="Lyon">Lyon</option>
+                  <option value="Saintetienne">Saint-etienne</option>
+                  <option value="Grenoble">Grenoble</option>
+                  <option value="Dijon">Dijon</option>
+                  <option value="Auxerre">Auxerre</option>
+                  <option value="Dole">Dole</option>
+                  <option value="Rennes">Rennes</option>
+                  <option value="Brest">Brest</option>
+                  <option value="Lorient">Lorient</option>
+                  <option value="Bordeaux">Bordeaux</option>
+                  <option value="Pau">Pau</option>
+                  <option value="Bayonnes">Bayonnes</option>
+               </select>
+            </div>
+         </div>
+      </div>
+      <div class = "flexbox ; corps" >
+         <div>
+            <div id="LyonBlock"  style = "visibility:hidden";>
+               <h2 align="center" class = "corps" style ="background-color : #1E90FF">Lyon</h2>
+               <p align="center"  class = "corps"> <FONT size="20pt"> 11º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Nuageux </b> </FONT> <br> <FONT size="4pt"> Précipitations: 36 % </FONT>
+                  <br>
+                  <img src="images/cloud.png" width="200" />
+               </p>
+            </div>
+         </div>
+         <div>
+            <div id="SaintetienneBlock" style = "visibility:hidden";>
+               <h2 align="center" class = "corps" style ="background-color : #1E90FF">Saint-etienne</h2>
+               <p align="center"  class ="corps"> <FONT size="20pt"> 9º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Nuageux </b> </FONT> <br> <FONT size="4pt"> Précipitations: 11 % </FONT>
+                  <br>
+                  <img src="images/cloud.png" width="200" />
+               </p>
+            </div>
+         </div>
+         <div >
+            <div id="GrenobleBlock" style = "visibility:hidden";>
+               <h2 align="center" class ="corps" style = "background-color : #1E90FF">Grenoble</h2>
+               <p align="center"  class ="corps"> <FONT size="20pt"> 5º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Pluvieux </b> </FONT> <br> <FONT size="4pt"> Précipitations: 72 % </FONT>
+                  <br>
+                  <img src="images/rain.png" width="200" />
+               </p>
+            </div>
+         </div>
+         <div>
+            <div id="DijonBlock" style = "visibility:hidden";>
+               <h2 align="center" class ="corps" style = "background-color :#00BFFF">Dijon</h2>
+               <p align="center"  class ="corps"> <FONT size="20pt"> -2º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Nuageux </b> </FONT> <br> <FONT size="4pt"> Précipitations: 7 % </FONT>
+                  <br>
+                  <img src="images/cloud.png" width="200" />
+               </p>
+            </div>
+         </div>
+         <div>
+            <div id="AuxerreBlock" style = "visibility:hidden";>
+               <h2 align="center" class = "corps" style = "background-color :#00BFFF" >Auxerre</h2>
+               <p align="center"  class="corps"> <FONT size="20pt"> 3º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Nuageux </b> </FONT> <br> <FONT size="4pt"> Précipitations: 11 % </FONT>
+                  <br>
+                  <img src="images/cloud.png" width="200" />
+               </p>
+            </div>
+         </div>
+         <div>
+            <div id="DoleBlock" style = "visibility:hidden";>
+               <h2 align="center" class="corps" style = "background-color :#00BFFF">Dole</h2>
+               <p align="center"  class ="corps"> <FONT size="20pt"> 15º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Ensoleillé </b> </FONT> <br> <FONT size="4pt"> Précipitations: 0 % </FONT>
+                  <br>
+                  <img src="images/sunny.png" width="200" />
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class = "flexbox ; corps" >
+         <div>
+            <div id="RennesBlock"  style = "visibility:hidden";>
+               <h2 align="center" class ="corps" style = "background-color :#00BFFF">Rennes</h2>
+               <p align="center"  class ="corps"> <FONT size="20pt"> 10º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Ensoleillé </b> </FONT> <br> <FONT size="4pt"> Précipitations: 0 % </FONT>
+                  <br>
+                  <img src="images/sunny.png" width="200" />
+               </p>
+            </div>
+         </div>
+         <div>
+            <div id="BrestBlock"  style = "visibility:hidden";>
+               <h2 align="center" class ="corps" style = "background-color :#00BFFF">Brest</h2>
+               <p align="center"  class ="corps"> <FONT size="20pt"> 5º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Nuageux </b> </FONT> <br> <FONT size="4pt"> Précipitations: 0 % </FONT>
+                  <br>
+                  <img src="images/cloud.png" width="200" />
+               </p>
+            </div>
+         </div>
+         <div >
+            <div id="LorientBlock"  style = "visibility:hidden";>
+               <h2 align="center" class ="corps" style = "background-color :#00BFFF">Lorient</h2>
+               <p align="center"  class ="corps"> <FONT size="20pt"> 13º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Ensoleillé </b> </FONT> <br> <FONT size="4pt"> Précipitations: 0 % </FONT>
+                  <br>
+                  <img src="images/sunny.png" width="200" />
+               </p>
+            </div>
+         </div>
+         <div>
+            <div id="BordeauxBlock"  style = "visibility:hidden";>
+               <h2 align="center" class ="corps" style ="background-color : #1E90FF">Bordeaux</h2>
+               <p align="center"  class ="corps"> <FONT size="20pt"> 13º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Nuageux </b> </FONT> <br> <FONT size="4pt"> Précipitations: 7 % </FONT>
+                  <br>
+                  <img src="images/cloud.png" width="200" />
+               </p>
+            </div>
+         </div>
+         <div>
+            <div id="PauBlock"  style = "visibility:hidden";>
+               <h2 align="center" class ="corps" style ="background-color : #1E90FF">Pau</h2>
+               <p align="center"  class ="corps"> <FONT size="20pt"> 1º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Pluvieux </b> </FONT> <br> <FONT size="4pt"> Précipitations: 60 % </FONT>
+                  <br>
+                  <img src="images/rain.png" width="200" />
+               </p>
+            </div>
+         </div>
+         <div>
+            <div id="BayonnesBlock"  style = "visibility:hidden";>
+               <h2 align="center" class ="corps" style ="background-color : #1E90FF">Bayonnes</h2>
+               <p align="center"  class ="corps"> <FONT size="20pt"> 3º C </FONT> 
+                  <br> <FONT size="4pt"> <b> Pluvieux </b> </FONT> <br> <FONT size="4pt"> Précipitations: 90 % </FONT>
+                  <br>
+                  <img src="images/rain.png" width="200" />
+               </p>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <p id = "footer">
+            <b> ©Copyright 2021 Par Abdelkarim MAJDOUB</b>
+            <br>
+            ©Copyright  les icones Par <a href="https://www.iconfinder.com/laurareen"> Laura Reen. </a>
+            Tous droits réservés. 
+         </p>
+      </footer>
+   </body>
+   <script type= "text/javascript" src="meteo.js">
+</script>   
+</html>
